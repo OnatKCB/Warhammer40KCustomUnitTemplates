@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="merc-1234-5678-9abc" name="Mercenaries" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue">
+  <sharedSelectionEntries>
+    <!-- Mercenary Captain -->
+    <selectionEntry type="model" import="true" name="Mercenary Captain" hidden="false" id="capt-merc-1234-5678">
+      <categoryLinks>
+        <categoryLink targetId="cf47-a0d7-7207-29dc" id="capt-inf-link" primary="false" name="Infantry"/>
+        <categoryLink targetId="9cfd-1c32-585f-7d5c" id="capt-char-link" primary="true" name="Character"/>
+        <categoryLink targetId="aff3-d6a3-2a95-9dc" id="capt-imp-link" primary="false" name="Imperium"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="85"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="capt-max-1"/>
+      </constraints>
+      <profiles>
+        <profile name="Mercenary Captain" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="capt-profile">
+          <characteristics>
+            <characteristic name="M" typeId="e703-ecb6-5ce7-aec1">6"</characteristic>
+            <characteristic name="T" typeId="d29d-cf75-fc2d-34a4">3</characteristic>
+            <characteristic name="SV" typeId="450-a17e-9d5e-29da">4+</characteristic>
+            <characteristic name="W" typeId="750a-a2ec-90d3-21fe">4</characteristic>
+            <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
+            <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Leader" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="capt-leader">
+          <characteristics>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model can be attached to the following units: **^^Mercenary Guard^^**, **^^Mercenary Breacher^^**</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Tactical Command" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="capt-tactical">
+          <characteristics>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Command phase, if this model is leading a unit, you can select one **^^Mercenary^^** unit within 6" of this model's unit. Until the start of your next Command phase, that unit has the Benefit of Cover.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons" id="capt-weapons" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Laspistol" hidden="false" id="capt-laspistol">
+              <profiles>
+                <profile name="Laspistol" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="capt-laspistol-profile">
+                  <characteristics>
+                    <characteristic name="Range" typeId="9896-9419-16a1-92fc">12"</characteristic>
+                    <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
+                    <characteristic name="BS" typeId="94d-8a98-cf90-183e">3+</characteristic>
+                    <characteristic name="S" typeId="2229-f494-25db-c5d3">3</characteristic>
+                    <characteristic name="AP" typeId="9ead-8a10-520-de15">0</characteristic>
+                    <characteristic name="D" typeId="a354-c1c8-a617-2abc">1</characteristic>
+                    <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Pistol</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="capt-laspistol-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="capt-laspistol-max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="capt-power-sword">
+              <profiles>
+                <profile name="Power Sword" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="capt-power-sword-profile">
+                  <characteristics>
+                    <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                    <characteristic name="A" typeId="2337-daa1-6682-b110">4</characteristic>
+                    <characteristic name="WS" typeId="95d1-95f-45b4-11d6">3+</characteristic>
+                    <characteristic name="S" typeId="ab33-d393-96ce-ccba">4</characteristic>
+                    <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-2</characteristic>
+                    <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
+                    <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="capt-power-sword-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="capt-power-sword-max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+
+    <!-- Mercenary Guard -->
+    <selectionEntry type="unit" import="true" name="Mercenary Guard" hidden="false" id="guard-merc-1234-5678">
+      <categoryLinks>
+        <categoryLink targetId="cf47-a0d7-7207-29dc" id="guard-inf-link" primary="false" name="Infantry"/>
+        <categoryLink targetId="e338-111e-d0c6-b687" id="guard-battle-link" primary="true" name="Battleline"/>
+        <categoryLink targetId="aff3-d6a3-2a95-9dc" id="guard-imp-link" primary="false" name="Imperium"/>
+        <categoryLink targetId="5a61-81ac-eb7c-a87e" id="guard-gren-link" primary="false" name="Grenades"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="guard-max-roster"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="110" field="51b2-306e-1021-d207">
+          <conditions>
+            <condition type="greaterThan" value="10" field="selections" scope="guard-merc-1234-5678" childId="model" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Mercenary Discipline" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="guard-discipline">
+          <characteristics>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this unit is selected to shoot, select one of the following benefits:
+• **^^Focused Fire^^**: Weapons in this unit have the [SUSTAINED HITS 1] ability.
+• **^^Covering Fire^^**: Weapons in this unit have the [INDIRECT FIRE] ability.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Unit Composition" hidden="false" id="guard-composition" defaultSelectionEntryId="guard-comp-10">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="1 Mercenary Sergeant and 9 Mercenary Guards" hidden="false" id="guard-comp-10">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Mercenary Sergeant" id="guard-sgt-group" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="model" import="true" name="Mercenary Sergeant" hidden="false" id="guard-sgt">
+                      <profiles>
+                        <profile name="Mercenary Sergeant" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="guard-sgt-profile">
+                          <characteristics>
+                            <characteristic name="M" typeId="e703-ecb6-5ce7-aec1">6"</characteristic>
+                            <characteristic name="T" typeId="d29d-cf75-fc2d-34a4">3</characteristic>
+                            <characteristic name="SV" typeId="450-a17e-9d5e-29da">5+</characteristic>
+                            <characteristic name="W" typeId="750a-a2ec-90d3-21fe">1</characteristic>
+                            <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
+                            <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Sergeant Weapons" id="guard-sgt-weapons" hidden="false">
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="guard-sgt-lasgun">
+                              <profiles>
+                                <profile name="Lasgun" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="guard-sgt-lasgun-profile">
+                                  <characteristics>
+                                    <characteristic name="Range" typeId="9896-9419-16a1-92fc">24"</characteristic>
+                                    <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
+                                    <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
+                                    <characteristic name="S" typeId="2229-f494-25db-c5d3">3</characteristic>
+                                    <characteristic name="AP" typeId="9ead-8a10-520-de15">0</characteristic>
+                                    <characteristic name="D" typeId="a354-c1c8-a617-2abc">1</characteristic>
+                                    <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Rapid Fire 1</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-lasgun-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-lasgun-max"/>
+                              </constraints>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Close combat weapon" hidden="false" id="guard-sgt-ccw">
+                              <profiles>
+                                <profile name="Close combat weapon" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="guard-sgt-ccw-profile">
+                                  <characteristics>
+                                    <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                                    <characteristic name="A" typeId="2337-daa1-6682-b110">2</characteristic>
+                                    <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
+                                    <characteristic name="S" typeId="ab33-d393-96ce-ccba">3</characteristic>
+                                    <characteristic name="AP" typeId="41a0-1301-112a-e2f2">0</characteristic>
+                                    <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
+                                    <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-ccw-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-ccw-max"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-max"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="9 Mercenary Guards" id="guard-troops-group" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="model" import="true" name="Mercenary Guard" hidden="false" id="guard-trooper">
+                      <profiles>
+                        <profile name="Mercenary Guard" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="guard-trooper-profile">
+                          <characteristics>
+                            <characteristic name="M" typeId="e703-ecb6-5ce7-aec1">6"</characteristic>
+                            <characteristic name="T" typeId="d29d-cf75-fc2d-34a4">3</characteristic>
+                            <characteristic name="SV" typeId="450-a17e-9d5e-29da">5+</characteristic>
+                            <characteristic name="W" typeId="750a-a2ec-90d3-21fe">1</characteristic>
+                            <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
+                            <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Guard Weapons" id="guard-trooper-weapons" hidden="false">
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="guard-trooper-lasgun">
+                              <profiles>
+                                <profile name="Lasgun" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="guard-trooper-lasgun-profile">
+                                  <characteristics>
+                                    <characteristic name="Range" typeId="9896-9419-16a1-92fc">24"</characteristic>
+                                    <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
+                                    <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
+                                    <characteristic name="S" typeId="2229-f494-25db-c5d3">3</characteristic>
+                                    <characteristic name="AP" typeId="9ead-8a10-520-de15">0</characteristic>
+                                    <characteristic name="D" typeId="a354-c1c8-a617-2abc">1</characteristic>
+                                    <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Rapid Fire 1</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="guard-trooper-lasgun-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="guard-trooper-lasgun-max"/>
+                              </constraints>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Close combat weapon" hidden="false" id="guard-trooper-ccw">
+                              <profiles>
+                                <profile name="Close combat weapon" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="guard-trooper-ccw-profile">
+                                  <characteristics>
+                                    <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                                    <characteristic name="A" typeId="2337-daa1-6682-b110">1</characteristic>
+                                    <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
+                                    <characteristic name="S" typeId="ab33-d393-96ce-ccba">3</characteristic>
+                                    <characteristic name="AP" typeId="41a0-1301-112a-e2f2">0</characteristic>
+                                    <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
+                                    <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="guard-trooper-ccw-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="guard-trooper-ccw-max"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <constraints>
+                        <constraint type="min" value="9" field="selections" scope="parent" shared="true" id="guard-trooper-min"/>
+                        <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="guard-trooper-max"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+
+    <!-- Mercenary Breacher -->
+    <selectionEntry type="unit" import="true" name="Mercenary Breacher" hidden="false" id="breach-merc-1234-5678">
+      <categoryLinks>
+        <categoryLink targetId="cf47-a0d7-7207-29dc" id="breach-inf-link" primary="false" name="Infantry"/>
+        <categoryLink targetId="2d7f-1892-2694-35f8" id="breach-assault-link" primary="true" name="Assault"/>
+        <categoryLink targetId="aff3-d6a3-2a95-9dc" id="breach-imp-link" primary="false" name="Imperium"/>
+        <categoryLink targetId="5a61-81ac-eb7c-a87e" id="breach-gren-link" primary="false" name="Grenades"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="breach-max-roster"/>
+      </constraints>
+      <profiles>
+        <profile name="Breach and Clear" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="breach-ability">
+          <characteristics>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Unit Composition" hidden="false" id="breach-composition" defaultSelectionEntryId="breach-comp-5">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="1 Breacher Sergeant and 4 Breachers" hidden="false" id="breach-comp-5">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Breacher Sergeant" id="breach-sgt-group" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="model" import="true" name="Breacher Sergeant" hidden="false" id="breach-sgt">
+                      <profiles>
+                        <profile name="Breacher Sergeant" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="breach-sgt-profile">
+                          <characteristics>
+                            <characteristic name="M" typeId="e703-ecb6-5ce7-aec1">6"</characteristic>
+                            <characteristic name="T" typeId="d29d-cf75-fc2d-34a4">3</characteristic>
+                            <characteristic name="SV" typeId="450-a17e-9d5e-29da">4+</characteristic>
+                            <characteristic name="W" typeId="750a-a2ec-90d3-21fe">1</characteristic>
+                            <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
+                            <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Sergeant Weapons" id="breach-sgt-weapons" hidden="false">
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="breach-sgt-shotgun">
+                              <profiles>
+                                <profile name="Shotgun" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="breach-sgt-shotgun-profile">
+                                  <characteristics>
+                                    <characteristic name="Range" typeId="9896-9419-16a1-92fc">12"</characteristic>
+                                    <characteristic name="A" typeId="3bb-c35f-f54-fb08">2</characteristic>
+                                    <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
+                                    <characteristic name="S" typeId="2229-f494-25db-c5d3">4</characteristic>
+                                    <characteristic name="AP" typeId="9ead-8a10-520-de15">0</characteristic>
+                                    <characteristic name="D" typeId="a354-c1c8-a617-2abc">1</characteristic>
+                                    <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Assault</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="breach-sgt-shotgun-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="breach-sgt-shotgun-max"/>
+                              </constraints>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Combat knife" hidden="false" id="breach-sgt-knife">
+                              <profiles>
+                                <profile name="Combat knife" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="breach-sgt-knife-profile">
+                                  <characteristics>
+                                    <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                                    <characteristic name="A" typeId="2337-daa1-6682-b110">3</characteristic>
+                                    <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
+                                    <characteristic name="S" typeId="ab33-d393-96ce-ccba">3</characteristic>
+                                    <characteristic name="AP" typeId="41a0-1301-112a-e2f2">0</characteristic>
+                                    <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
+                                    <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="breach-sgt-knife-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="breach-sgt-knife-max"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="breach-sgt-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="breach-sgt-max"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="4 Breachers" id="breach-troops-group" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="model" import="true" name="Breacher" hidden="false" id="breach-trooper">
+                      <profiles>
+                        <profile name="Breacher" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="breach-trooper-profile">
+                          <characteristics>
+                            <characteristic name="M" typeId="e703-ecb6-5ce7-aec1">6"</characteristic>
+                            <characteristic name="T" typeId="d29d-cf75-fc2d-34a4">3</characteristic>
+                            <characteristic name="SV" typeId="450-a17e-9d5e-29da">4+</characteristic>
+                            <characteristic name="W" typeId="750a-a2ec-90d3-21fe">1</characteristic>
+                            <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
+                            <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Breacher Weapons" id="breach-trooper-weapons" hidden="false">
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="breach-trooper-shotgun">
+                              <profiles>
+                                <profile name="Shotgun" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="breach-trooper-shotgun-profile">
+                                  <characteristics>
+                                    <characteristic name="Range" typeId="9896-9419-16a1-92fc">12"</characteristic>
+                                    <characteristic name="A" typeId="3bb-c35f-f54-fb08">2</characteristic>
+                                    <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
+                                    <characteristic name="S" typeId="2229-f494-25db-c5d3">4</characteristic>
+                                    <characteristic name="AP" typeId="9ead-8a10-520-de15">0</characteristic>
+                                    <characteristic name="D" typeId="a354-c1c8-a617-2abc">1</characteristic>
+                                    <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Assault</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="breach-trooper-shotgun-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="breach-trooper-shotgun-max"/>
+                              </constraints>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Combat knife" hidden="false" id="breach-trooper-knife">
+                              <profiles>
+                                <profile name="Combat knife" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="breach-trooper-knife-profile">
+                                  <characteristics>
+                                    <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                                    <characteristic name="A" typeId="2337-daa1-6682-b110">2</characteristic>
+                                    <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
+                                    <characteristic name="S" typeId="ab33-d393-96ce-ccba">3</characteristic>
+                                    <characteristic name="AP" typeId="41a0-1301-112a-e2f2">0</characteristic>
+                                    <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
+                                    <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="breach-trooper-knife-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="breach-trooper-knife-max"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <constraints>
+                        <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="breach-trooper-min"/>
+                        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="breach-trooper-max"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+  </sharedSelectionEntries>
+
+  <entryLinks>
+    <entryLink import="true" name="Mercenary Captain" hidden="false" type="selectionEntry" id="merc-capt-link" targetId="capt-merc-1234-5678"/>
+    <entryLink import="true" name="Mercenary Guard" hidden="false" type="selectionEntry" id="merc-guard-link" targetId="guard-merc-1234-5678"/>
+    <entryLink import="true" name="Mercenary Breacher" hidden="false" type="selectionEntry" id="merc-breach-link" targetId="breach-merc-1234-5678"/>
+  </entryLinks>
+</catalogue>
