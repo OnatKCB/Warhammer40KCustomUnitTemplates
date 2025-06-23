@@ -135,9 +135,9 @@
                       <selectionEntryGroups>
                         <selectionEntryGroup name="Sergeant Weapons" id="guard-sgt-weapons" hidden="false">
                           <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="guard-sgt-lasgun">
+                            <selectionEntry type="upgrade" import="true" name="Autogun" hidden="false" id="guard-sgt-autogun">
                               <profiles>
-                                <profile name="Lasgun" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="guard-sgt-lasgun-profile">
+                                <profile name="Autogun" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="guard-sgt-autogun-profile">
                                   <characteristics>
                                     <characteristic name="Range" typeId="9896-9419-16a1-92fc">24"</characteristic>
                                     <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
@@ -150,8 +150,8 @@
                                 </profile>
                               </profiles>
                               <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-lasgun-min"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-lasgun-max"/>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-autogun-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="guard-sgt-autogun-max"/>
                               </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Close combat weapon" hidden="false" id="guard-sgt-ccw">
@@ -201,9 +201,9 @@
                       <selectionEntryGroups>
                         <selectionEntryGroup name="Guard Weapons" id="guard-trooper-weapons" hidden="false">
                           <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="guard-trooper-lasgun">
+                            <selectionEntry type="upgrade" import="true" name="Autogun" hidden="false" id="guard-trooper-autogun">
                               <profiles>
-                                <profile name="Lasgun" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="guard-trooper-lasgun-profile">
+                                <profile name="Autogun" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="guard-trooper-autogun-profile">
                                   <characteristics>
                                     <characteristic name="Range" typeId="9896-9419-16a1-92fc">24"</characteristic>
                                     <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
@@ -216,8 +216,8 @@
                                 </profile>
                               </profiles>
                               <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="guard-trooper-lasgun-min"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="guard-trooper-lasgun-max"/>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="guard-trooper-autogun-min"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="guard-trooper-autogun-max"/>
                               </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Close combat weapon" hidden="false" id="guard-trooper-ccw">
